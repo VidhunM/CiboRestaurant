@@ -1,21 +1,47 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
+
+// Use direct paths so we don't depend on TS/Vite image module resolution.
+// Make sure these files exist at these paths in your project.
+const images = [
+  "/src/assets/hero1 (1).JPG",
+  "/src/assets/hero1 (2).JPG",
+  "/src/assets/hero1 (3).JPG",
+  "/src/assets/hero1 (4).JPG",
+  "/src/assets/hero1 (5).JPG",
+];
 
 const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000); // change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image Slider */}
       <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt="Cibo Restaurant interior with elegant fine dining ambiance"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
+        {images.map((img, index) => (
+          <motion.img
+            key={index}
+            src={img}
+            alt="Cibo Restaurant interior with elegant fine dining ambiance"
+            className="w-full h-full object-cover absolute inset-0"
+            loading={index === 0 ? "eager" : "lazy"}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: currentIndex === index ? 1 : 0 }}
+            transition={{ duration: 1.2 }}
+          />
+        ))}
         <div
           className="absolute inset-0"
           style={{ background: "var(--gradient-overlay)" }}
@@ -39,7 +65,7 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-tight mb-8"
         >
-          Exquisitions Indian
+          Exquisite Indian
           <br />
           <span className="italic text-primary">Cuisine</span>
         </motion.h1>

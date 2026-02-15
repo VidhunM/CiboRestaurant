@@ -1,21 +1,76 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import dish1 from "@/assets/dish-1.jpg";
-import dish2 from "@/assets/dish-2.jpg";
-import dish3 from "@/assets/dish-3.jpg";
-import dish4 from "@/assets/dish-4.jpg";
-import dish5 from "@/assets/dish-5.jpg";
-import dish6 from "@/assets/dish-6.jpg";
 
 const galleryImages = [
-  { src: dish4, alt: "Traditional Indian Thali with assorted curries" },
-  { src: dish1, alt: "Paneer Saunfiya with golden saffron sauce" },
-  { src: dish5, alt: "Butter Naan fresh from the tandoor" },
-  { src: dish2, alt: "Fragrant Hyderabadi Biryani" },
-  { src: dish6, alt: "Crispy Masala Dosa with chutneys" },
-  { src: dish3, alt: "Gulab Jamun in rose syrup" },
+  // Existing 6 gallery images
+  {
+    src: "/src/assets/dish-4.jpg",
+    alt: "Traditional Indian Thali with assorted curries",
+  },
+  {
+    src: "/src/assets/dish-1.jpg",
+    alt: "Paneer Saunfiya with golden saffron sauce",
+  },
+  {
+    src: "/src/assets/dish-5.jpg",
+    alt: "Butter Naan fresh from the tandoor",
+  },
+  {
+    src: "/src/assets/dish-2.jpg",
+    alt: "Fragrant Hyderabadi Biryani",
+  },
+  {
+    src: "/src/assets/dish-6.jpg",
+    alt: "Crispy Masala Dosa with chutneys",
+  },
+  {
+    src: "/src/assets/dish-3.jpg",
+    alt: "Gulab Jamun in rose syrup",
+  },
+
+  // New 6 special shots
+  {
+    src: "/src/assets/desert.jpg",
+    alt: "Decadent dessert plated with modern elegance",
+  },
+  {
+    src: "/src/assets/veg soup.jpg",
+    alt: "Warm vegetable soup in an artisanal bowl",
+  },
+  {
+    src: "/src/assets/panner  lababdar.JPG",
+    alt: "Paneer Lababdar in rich tomato gravy",
+  },
+  {
+    src: "/src/assets/creamy chicken wings.jpg",
+    alt: "Creamy chicken wings garnished with herbs",
+  },
+  {
+    src: "/src/assets/drums of heaven.jpg",
+    alt: "Crispy drums of heaven tossed in sauce",
+  },
+  {
+    src: "/src/assets/pad thai noodles.jpg",
+    alt: "Pad Thai noodles with fresh vegetables",
+  },
 ];
 
+const ITEMS_PER_PAGE = 6;
+
 const GallerySection = () => {
+  const [page, setPage] = useState(0);
+
+  const totalPages = Math.max(1, Math.ceil(galleryImages.length / ITEMS_PER_PAGE));
+  const startIndex = page * ITEMS_PER_PAGE;
+  const visibleImages = galleryImages.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const handlePrev = () => {
+    setPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const handleNext = () => {
+    setPage((prev) => (prev + 1) % totalPages);
+  };
   return (
     <section id="gallery" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
@@ -36,11 +91,34 @@ const GallerySection = () => {
           <div className="gold-divider-wide mx-auto" />
         </motion.div>
 
-        {/* Gallery Grid */}
+        {/* Gallery Slider Controls */}
+        <div className="flex items-center justify-between mb-6">
+          <span className="font-body text-xs letter-spacing-widest uppercase text-muted-foreground">
+            Slide {page + 1} of {totalPages}
+          </span>
+          <div className="flex gap-3">
+            <button
+              type="button"
+              onClick={handlePrev}
+              className="w-9 h-9 flex items-center justify-center border border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              onClick={handleNext}
+              className="w-9 h-9 flex items-center justify-center border border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+
+        {/* Gallery Grid (2 x 3) */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {galleryImages.map((img, index) => (
+          {visibleImages.map((img, index) => (
             <motion.div
-              key={index}
+              key={`${img.alt}-${index}`}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}

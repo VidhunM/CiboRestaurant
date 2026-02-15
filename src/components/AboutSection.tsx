@@ -1,6 +1,17 @@
 import { motion } from "framer-motion";
 import aboutBg from "@/assets/about-bg.jpg";
 
+const gutImages = [
+  "/src/assets/g1 (1).jpeg",
+  "/src/assets/g1 (2).jpeg",
+  "/src/assets/g1 (3).jpeg",
+  "/src/assets/g1 (4).jpeg",
+  "/src/assets/g1 (5).jpeg",
+  "/src/assets/g1 (6).jpeg",  
+  "/src/assets/g1 (7).jpeg",
+  "/src/assets/g1(8).jpeg",
+];
+
 const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-background">
@@ -70,6 +81,46 @@ const AboutSection = () => {
             <div className="gold-divider" />
           </motion.div>
         </div>
+
+        {/* Go With Your Gut */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="mt-20"
+        >
+          <div className="text-center mb-10">
+            <p className="font-body text-sm letter-spacing-widest uppercase text-primary mb-3">
+              Go With Your Gut
+            </p>
+            <h3 className="font-display text-3xl md:text-4xl font-light text-foreground mb-4">
+              When your gut feels good, you feel amazing.
+            </h3>
+            <p className="font-body text-base md:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto">
+              Learn more about our gut-friendly bowls, crafted with balanced
+              ingredients, mindful cooking techniques, and flavors that nourish
+              you from the inside out.
+            </p>
+          </div>
+
+          {/* 2 x 4 Image Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {gutImages.map((src, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-lg border border-primary/10 aspect-square"
+              >
+                <img
+                  src={src}
+                  alt="Gut-friendly bowl"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

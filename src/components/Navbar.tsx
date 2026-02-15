@@ -39,12 +39,17 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+        
         {/* Logo */}
         <button
           onClick={() => handleClick("#home")}
           className="hover:opacity-80 transition-opacity"
         >
-          <img src={ciboLogo} alt="Cibo Restaurant Logo" className="h-14 md:h-16 w-auto" />
+          <img
+            src={ciboLogo}
+            alt="Cibo Restaurant Logo"
+            className="h-14 md:h-16 w-auto"
+          />
         </button>
 
         {/* Desktop Links */}
@@ -53,7 +58,11 @@ const Navbar = () => {
             <li key={link.label}>
               <button
                 onClick={() => handleClick(link.href)}
-                className="font-body text-sm letter-spacing-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+                className={`font-body text-sm tracking-widest uppercase transition-colors duration-300 ${
+                  scrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-white hover:text-primary"
+                }`}
               >
                 {link.label}
               </button>
@@ -64,7 +73,9 @@ const Navbar = () => {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-foreground"
+          className={`md:hidden transition-colors ${
+            scrolled ? "text-foreground" : "text-white"
+          }`}
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -85,7 +96,7 @@ const Navbar = () => {
                 <li key={link.label}>
                   <button
                     onClick={() => handleClick(link.href)}
-                    className="font-body text-lg letter-spacing-widest uppercase text-muted-foreground hover:text-primary transition-colors"
+                    className="font-body text-lg tracking-widest uppercase text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </button>
