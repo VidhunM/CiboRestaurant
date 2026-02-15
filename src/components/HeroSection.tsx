@@ -39,7 +39,7 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-tight mb-8"
         >
-          Exquisite Indian
+          Exquisitions Indian
           <br />
           <span className="italic text-primary">Cuisine</span>
         </motion.h1>
