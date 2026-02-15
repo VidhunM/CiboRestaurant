@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-// Use direct paths so we don't depend on TS/Vite image module resolution.
-// Make sure these files exist at these paths in your project.
-const images = [
-  "/src/assets/hero1 (1).JPG",
-  "/src/assets/hero1 (2).JPG",
-  "/src/assets/hero1 (3).JPG",
-  "/src/assets/hero1 (4).JPG",
-  "/src/assets/hero1 (5).JPG",
-];
+import hero1 from "@/assets/hero1 (1).JPG";
+import hero2 from "@/assets/hero1 (2).JPG";
+import hero3 from "@/assets/hero1 (3).JPG";
+import hero4 from "@/assets/hero1 (4).JPG";
+import hero5 from "@/assets/hero1 (5).JPG";
+
+const images = [hero1, hero2, hero3, hero4, hero5];
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

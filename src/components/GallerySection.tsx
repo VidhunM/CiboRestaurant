@@ -1,56 +1,69 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+import dish1 from "@/assets/dish-1.jpg";
+import dish2 from "@/assets/dish-2.jpg";
+import dish3 from "@/assets/dish-3.jpg";
+import dish4 from "@/assets/dish-4.jpg";
+import dish5 from "@/assets/dish-5.jpg";
+import dish6 from "@/assets/dish-6.jpg";
+import desert from "@/assets/desert.JPG";
+import vegSoup from "@/assets/veg soup.JPG";
+import pannerLababdar from "@/assets/panner  lababdar.JPG";
+import creamyChickenWings from "@/assets/creamy chicken wings.JPG";
+import drumsOfHeaven from "@/assets/drums of heaven.JPG";
+import padThaiNoodles from "@/assets/pad thai noodles.JPG";
+
 const galleryImages = [
   // Existing 6 gallery images
   {
-    src: "/src/assets/dish-4.jpg",
+    src: dish4,
     alt: "Traditional Indian Thali with assorted curries",
   },
   {
-    src: "/src/assets/dish-1.jpg",
+    src: dish1,
     alt: "Paneer Saunfiya with golden saffron sauce",
   },
   {
-    src: "/src/assets/dish-5.jpg",
+    src: dish5,
     alt: "Butter Naan fresh from the tandoor",
   },
   {
-    src: "/src/assets/dish-2.jpg",
+    src: dish2,
     alt: "Fragrant Hyderabadi Biryani",
   },
   {
-    src: "/src/assets/dish-6.jpg",
+    src: dish6,
     alt: "Crispy Masala Dosa with chutneys",
   },
   {
-    src: "/src/assets/dish-3.jpg",
+    src: dish3,
     alt: "Gulab Jamun in rose syrup",
   },
 
   // New 6 special shots
   {
-    src: "/src/assets/desert.jpg",
+    src: desert,
     alt: "Decadent dessert plated with modern elegance",
   },
   {
-    src: "/src/assets/veg soup.jpg",
+    src: vegSoup,
     alt: "Warm vegetable soup in an artisanal bowl",
   },
   {
-    src: "/src/assets/panner  lababdar.JPG",
+    src: pannerLababdar,
     alt: "Paneer Lababdar in rich tomato gravy",
   },
   {
-    src: "/src/assets/creamy chicken wings.jpg",
+    src: creamyChickenWings,
     alt: "Creamy chicken wings garnished with herbs",
   },
   {
-    src: "/src/assets/drums of heaven.jpg",
+    src: drumsOfHeaven,
     alt: "Crispy drums of heaven tossed in sauce",
   },
   {
-    src: "/src/assets/pad thai noodles.jpg",
+    src: padThaiNoodles,
     alt: "Pad Thai noodles with fresh vegetables",
   },
 ];
