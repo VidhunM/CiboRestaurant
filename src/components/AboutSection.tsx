@@ -1,15 +1,23 @@
 import { motion } from "framer-motion";
 import aboutBg from "@/assets/about-bg.jpg";
+import g1 from "@/assets/g1-1.jpeg";
+import g2 from "@/assets/g1-2.jpeg";
+import g3 from "@/assets/g1-3.jpeg";
+import g4 from "@/assets/g1-4.jpeg";
+import g5 from "@/assets/g1-5.jpeg";
+import g6 from "@/assets/g1-6.jpeg";
+import g7 from "@/assets/g1-7.jpeg";
+import g8 from "@/assets/g1-8.jpeg";
 
 const gutImages = [
-  "/src/assets/g1 (1).jpeg",
-  "/src/assets/g1 (2).jpeg",
-  "/src/assets/g1 (3).jpeg",
-  "/src/assets/g1 (4).jpeg",
-  "/src/assets/g1 (5).jpeg",
-  "/src/assets/g1 (6).jpeg",  
-  "/src/assets/g1 (7).jpeg",
-  "/src/assets/g1(8).jpeg",
+  g1,
+  g2,
+  g3,
+  g4,
+  g5,
+  g6,
+  g7,
+  g8,
 ];
 
 const AboutSection = () => {
@@ -61,22 +69,14 @@ const AboutSection = () => {
           >
             <p className="font-body text-lg md:text-xl leading-relaxed text-cream mb-6">
               <span className="italic">
-                India is not a single serving off a menu card — it's a melange
-                of culture & curries!
+                A great cuisine is more than food - it is a celebration of heritage, artistry, and bold flavors.
               </span>
             </p>
             <p className="font-body text-base md:text-lg leading-relaxed text-muted-foreground mb-6">
-              At Cibo, we have curated traditional mouthwatering dishes from
-              different parts of India — from the royal kitchens of Rajasthan to
-              the aromatic streets of Lucknow, from the spice-laden corridors
-              of Old Delhi to the coconut-kissed shores of Tamil Nadu.
+              At Cibo, we bring together iconic regional specialties inspired by regal traditions, vibrant marketplaces, and coastal influences. Every dish is thoughtfully crafted to honor its roots while delivering a refined dining experience.
             </p>
             <p className="font-body text-base md:text-lg leading-relaxed text-muted-foreground mb-8">
-              Our chefs keep authenticity intact by sourcing the finest
-              ingredients from their origins across India, ensuring every dish
-              tells a story of its homeland. Located in the heart of Salem, we
-              bring you an unmatched culinary journey with world-class quality
-              standards and a state-of-the-art kitchen.
+              Situated in Salem, Tamil Nadu, Cibo combines authenticity with modern excellence, offering impeccable quality, elegant ambience, and a cutting-edge culinary space.
             </p>
             <div className="gold-divider" />
           </motion.div>

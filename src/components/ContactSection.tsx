@@ -23,7 +23,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: "Hours",
-    value: "09:00 AM – 3:30 PM · 6:00 PM – 11:00 PM",
+    value: "12:00 PM – 03:00 AM ·",
   },
 ];
 
@@ -72,12 +72,12 @@ const ContactSection = () => {
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="font-sans text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {item.value}
                 </a>
               ) : (
-                <p className="font-body text-sm text-muted-foreground">
+                <p className="font-sans text-sm text-muted-foreground">
                   {item.value}
                 </p>
               )}

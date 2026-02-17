@@ -1,13 +1,23 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import hero1 from "@/assets/hero1 (1).JPG";
-import hero2 from "@/assets/hero1 (2).JPG";
-import hero3 from "@/assets/hero1 (3).JPG";
-import hero4 from "@/assets/hero1 (4).JPG";
-import hero5 from "@/assets/hero1 (5).JPG";
+// Use direct paths so we don't depend on TS/Vite image module resolution.
+// Make sure these files exist at these paths in your project.
+import hero1 from "@/assets/hero1-1.jpg";
+import hero2 from "@/assets/hero1-2.jpg";
+import hero3 from "@/assets/hero1-3.jpg";
+import hero4 from "@/assets/hero1-4.jpg";
+import hero5 from "@/assets/hero1-5.jpg";
 
-const images = [hero1, hero2, hero3, hero4, hero5];
+// Use direct paths so we don't depend on TS/Vite image module resolution.
+// Make sure these files exist at these paths in your project.
+const images = [
+  hero1,
+  hero2,
+  hero3,
+  hero4,
+  hero5,
+];
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,18 +64,18 @@ const HeroSection = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="font-body text-sm md:text-base letter-spacing-widest uppercase text-primary mb-4"
         >
-          Premium Fine Dining · Salem
+          Elegant Dining · Salem
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-tight mb-8"
+          className="font-display text-3xl md:text-4xl lg:text-6xl font-light text-foreground leading-tight mb-8"
         >
-          Exquisite Indian
+          Exquisite Culinary Experience
           <br />
-          <span className="italic text-primary">Cuisine</span>
+          <span className="italic text-primary block pt-2">Cuisine</span>
         </motion.h1>
 
         <motion.div
