@@ -5,14 +5,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 9626882220 / 9626442221",
+    value: "96268 82220 / 96264 42221",
     href: "tel:+919626882220",
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "1st Floor, 312/2, Omalur Main Rd, Salem, Tamil Nadu 636007",
-    href: "https://maps.google.com/?q=312/2+Omalur+Main+Rd+Salem+Tamil+Nadu+636007",
+    value: "No. 312/2, 1st Floor, Omalur Main Road, Near Captain Petrol Bunk, Salem - 7",
+    href: "https://maps.google.com/?q=No.+312/2,+1st+Floor,+Omalur+Main+Road,+Near+Captain+Petrol+Bunk,+Salem+-+7",
   },
   {
     icon: Mail,

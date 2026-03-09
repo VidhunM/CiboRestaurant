@@ -136,9 +136,14 @@ const ServicesSection = () => {
                                             ))}
                                         </ul>
 
-                                        <button className="mt-6 px-8 py-3 border border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300 font-body uppercase tracking-wider text-sm">
+                                        <a
+                                            href="https://wa.me/919626882220?text=Hi%20Cibo%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-block mt-6 px-8 py-3 border border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300 font-body uppercase tracking-wider text-sm"
+                                        >
                                             Inquire Now
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </CarouselItem>
