@@ -29,7 +29,7 @@ const contactInfo = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="section-padding bg-charcoal">
+    <section id="contact" className="section-padding pt-10 md:pt-14 bg-charcoal -mt-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -37,7 +37,7 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-14"
         >
           <p className="font-body text-sm letter-spacing-widest uppercase text-primary mb-4">
             Reservations & Inquiries

@@ -67,15 +67,15 @@ const ServicesSection = () => {
     }, [api]);
 
     return (
-        <section id="services" className="section-padding bg-background overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+        <section id="services" className="section-padding pt-10 md:pt-14 bg-background overflow-hidden -mt-20">
+            <div className="max-w-7xl mx-auto ">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-16"
+                    className="text-center mb-12 md:mb-14"
                 >
                     <p className="font-body text-sm letter-spacing-widest uppercase text-primary mb-4">
                         Exceptional Experiences
