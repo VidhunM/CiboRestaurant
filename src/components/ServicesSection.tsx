@@ -10,13 +10,15 @@ import {
     CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel";
+import fineDiningImg from "@/assets/FD.jpeg";
+import getTogetherImg from "@/assets/Gg.jpeg";
 
 const services = [
     {
         icon: Utensils,
         title: "Fine Dining",
         description: "Experience culinary excellence with our carefully curated menu featuring authentic flavors and innovative dishes.",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop",
+        image: fineDiningImg,
         features: ["Authentic Cuisine", "Elegant Ambiance", "Expert Chefs", "Premium Service"]
     },
     {
@@ -37,7 +39,7 @@ const services = [
         icon: Users,
         title: "Get Togethers",
         description: "Reconnect with friends and family in a warm, welcoming environment. Perfect for reunions and casual gatherings.",
-        image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop",
+        image: getTogetherImg,
         features: ["Flexible Seating", "Group Packages", "Relaxed Atmosphere", "Dedicated Service"]
     },
     {

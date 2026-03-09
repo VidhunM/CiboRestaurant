@@ -1,70 +1,67 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import dish4 from "@/assets/Icecream.jpg";
-import dish1 from "@/assets/Non Veg Soup.jpg";
-import dish5 from "@/assets/pad-thai-noodles.jpg";
-import dish2 from "@/assets/malai nasi goreng.jpg";
-import dish6 from "@/assets/korean kimichi salad.jpg";
-import dish3 from "@/assets/panner-lababdar.jpg";
-import desert from "@/assets/desert-delight.jpg";
-import vegSoup from "@/assets/veg-soup.jpg";
-import paneerLababdar from "@/assets/panner-lababdar.jpg";
-import creamyChickenWings from "@/assets/creamy-chicken-wings.jpg";
-import drumsOfHeaven from "@/assets/drums-of-heaven.jpg";
-import padThaiNoodles from "@/assets/pad-thai-noodles.jpg";
+import fe1_1 from "@/assets/fe1 (1).png";
+import fe1_2 from "@/assets/fe1 (2).png";
+import fe1_3 from "@/assets/fe1 (3).png";
+import fe1_4 from "@/assets/fe1 (4).png";
+import fe1_5 from "@/assets/fe1 (5).png";
+import fe1_6 from "@/assets/fe1 (6).png";
+import fe1_7 from "@/assets/fe1 (7).png";
+import fe1_8 from "@/assets/fe1 (8).png";
+import fe1_9 from "@/assets/fe1 (9).png";
+import fe1_10 from "@/assets/fe1 (10).png";
+import fe1_11 from "@/assets/fe1 (11).png";
+import fe1_12 from "@/assets/fe1 (12).png";
 
 const galleryImages = [
-  // Existing 6 gallery images
   {
-    src: dish4,
-    alt: "Classic Ice Cream Delight",
+    src: fe1_1,
+    alt: "Feast for the eyes 1",
   },
   {
-    src: dish1,
-    alt: "Hot & Flavorful Non-Veg Soup",
+    src: fe1_2,
+    alt: "Feast for the eyes 2",
   },
   {
-    src: dish5,
-    alt: "Authentic Pad Thai Noodles",
+    src: fe1_3,
+    alt: "Feast for the eyes 3",
   },
   {
-    src: dish2,
-    alt: "Malai Nasi Goreng – Creamy Fried Rice",
+    src: fe1_4,
+    alt: "Feast for the eyes 4",
   },
   {
-    src: dish6,
-    alt: "Traditional Korean Kimchi Salad",
+    src: fe1_5,
+    alt: "Feast for the eyes 5",
   },
   {
-    src: dish3,
-    alt: "Paneer Lababdar in Rich Tomato Gravy",
-  },
-
-  // New 6 special shots
-  {
-    src: desert,
-    alt: "Decadent dessert plated with modern elegance",
+    src: fe1_6,
+    alt: "Feast for the eyes 6",
   },
   {
-    src: vegSoup,
-    alt: "Warm vegetable soup in an artisanal bowl",
+    src: fe1_7,
+    alt: "Feast for the eyes 7",
   },
   {
-    src: paneerLababdar,
-    alt: "Paneer Lababdar in rich tomato gravy",
+    src: fe1_8,
+    alt: "Feast for the eyes 8",
   },
   {
-    src: creamyChickenWings,
-    alt: "Creamy chicken wings garnished with herbs",
+    src: fe1_9,
+    alt: "Feast for the eyes 9",
   },
   {
-    src: drumsOfHeaven,
-    alt: "Crispy drums of heaven tossed in sauce",
+    src: fe1_10,
+    alt: "Feast for the eyes 10",
   },
   {
-    src: padThaiNoodles,
-    alt: "Pad Thai noodles with fresh vegetables",
+    src: fe1_11,
+    alt: "Feast for the eyes 11",
+  },
+  {
+    src: fe1_12,
+    alt: "Feast for the eyes 12",
   },
 ];
 
@@ -136,18 +133,18 @@ const GallerySection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative overflow-hidden aspect-square"
+              className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-black/10 shadow-sm hover:shadow-xl hover:shadow-black/20 transition-shadow duration-300"
             >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-500 flex items-end justify-center">
-                <p className="font-body text-xs letter-spacing-widest uppercase text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500 pb-6 text-center px-4">
-                  {img.alt}
-                </p>
+              <div className="aspect-square w-full p-3 md:p-4">
+                <img
+                  src={img.src}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                  decoding="async"
+                  loading={index < 3 ? "eager" : "lazy"}
+                  fetchPriority={index < 1 ? "high" : "auto"}
+                />
               </div>
             </motion.div>
           ))}

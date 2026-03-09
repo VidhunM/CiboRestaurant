@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aboutBg from "@/assets/about-bg.jpg";
+import aboutBg from "@/assets/about-bg.jpeg";
 import g1 from "@/assets/g1-1.jpeg";
 import g2 from "@/assets/g1-2.jpeg";
 import g3 from "@/assets/g1-3.jpeg";
