@@ -33,12 +33,12 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled || mobileOpen
         ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
         : "bg-transparent"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between h-16 md:h-20">
 
         {/* Logo */}
         <button
@@ -48,7 +48,7 @@ const Navbar = () => {
           <img
             src={ciboLogo}
             alt="Cibo Restaurant Logo"
-            className="h-18 md:h-20 w-auto"
+            className="h-12 md:h-16 w-auto"
           />
         </button>
 
@@ -72,11 +72,11 @@ const Navbar = () => {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`md:hidden transition-colors ${scrolled ? "text-foreground" : "text-white"
+          className={`md:hidden p-2 transition-colors ${scrolled || mobileOpen ? "text-foreground" : "text-white"
             }`}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -85,16 +85,16 @@ const Navbar = () => {
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/98 backdrop-blur-lg border-b border-border"
+            className="md:hidden bg-background/98 backdrop-blur-lg border-t border-border overflow-hidden"
           >
-            <ul className="flex flex-col items-center py-8 gap-6">
+            <ul className="flex flex-col items-center justify-center h-full py-8 gap-8">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <button
                     onClick={() => handleClick(link.href)}
-                    className="font-body text-lg tracking-widest uppercase text-foreground hover:text-primary transition-colors"
+                    className="font-body text-xl tracking-widest uppercase text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </button>
