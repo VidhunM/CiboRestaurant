@@ -10,7 +10,7 @@ import {
     CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel";
-import fineDiningImg from "@/assets/FD.jpeg";
+import fineDiningImg from "@/assets/fd1.jpg";
 import getTogetherImg from "@/assets/Gg.jpeg";
 import birthdayPartyImg from "@/assets/bp.jpg";
 import corporateEventsImg from "@/assets/ce.jpg";

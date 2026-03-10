@@ -8,6 +8,13 @@ import hero2 from "@/assets/hero1-2.jpg";
 import hero3 from "@/assets/hero1-3.jpg";
 import hero4 from "@/assets/hero1-4.jpg";
 import hero5 from "@/assets/hero1-5.jpg";
+import hero6 from "@/assets/hero02 (1).JPG";
+import hero7 from "@/assets/hero02 (2).JPG";
+import hero8 from "@/assets/hero02 (3).JPG";
+import hero9 from "@/assets/hero02 (4).JPG";
+import hero10 from "@/assets/hero02 (8).jpg";
+import hero11 from "@/assets/hero02 (6).JPG";
+import hero12 from "@/assets/hero02 (7).JPG";
 
 // Use direct paths so we don't depend on TS/Vite image module resolution.
 // Make sure these files exist at these paths in your project.
@@ -17,6 +24,13 @@ const images = [
   hero3,
   hero4,
   hero5,
+  hero6,
+  hero7,
+  hero8,
+  hero9,
+  hero10,
+  hero11,
+  hero12,
 ];
 
 const HeroSection = () => {

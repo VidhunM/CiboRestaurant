@@ -6,7 +6,7 @@ import ciboLogo from "@/assets/cibo-logo.png";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Menu", href: "#menu" },
+  { label: "Menu", href: "#gallery" },
   { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },

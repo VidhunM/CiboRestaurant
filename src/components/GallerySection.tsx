@@ -13,6 +13,18 @@ import fe1_9 from "@/assets/fe1 (9).png";
 import fe1_10 from "@/assets/fe1 (10).png";
 import fe1_11 from "@/assets/fe1 (11).png";
 import fe1_12 from "@/assets/fe1 (12).png";
+import os1_1 from "@/assets/os1 (1).png";
+import os1_2 from "@/assets/os1 (2).png";
+import os1_3 from "@/assets/os1 (3).png";
+import os1_4 from "@/assets/os1 (4).png";
+import os1_5 from "@/assets/os1 (5).png";
+import os1_6 from "@/assets/os1 (6).png";
+import ds1_1 from "@/assets/ds1 (1).png";
+import ds1_2 from "@/assets/ds1 (2).png";
+import ds1_3 from "@/assets/ds1 (3).png";
+import ds1_4 from "@/assets/ds1 (4).png";
+import ds1_5 from "@/assets/ds1 (5).png";
+import ds1_6 from "@/assets/ds1 (6).png";
 
 const galleryImages = [
   {
@@ -62,6 +74,54 @@ const galleryImages = [
   {
     src: fe1_12,
     alt: "Feast for the eyes 12",
+  },
+  {
+    src: os1_1,
+    alt: "Feast for the eyes 13",
+  },
+  {
+    src: os1_2,
+    alt: "Feast for the eyes 14",
+  },
+  {
+    src: os1_3,
+    alt: "Feast for the eyes 15",
+  },
+  {
+    src: os1_4,
+    alt: "Feast for the eyes 16",
+  },
+  {
+    src: os1_5,
+    alt: "Feast for the eyes 17",
+  },
+  {
+    src: os1_6,
+    alt: "Feast for the eyes 18",
+  },
+  {
+    src: ds1_1,
+    alt: "Feast for the eyes 19",
+  },
+  {
+    src: ds1_2,
+    alt: "Feast for the eyes 20",
+  },
+  {
+    src: ds1_3,
+    alt: "Feast for the eyes 21",
+  },
+  {
+    src: ds1_4,
+    alt: "Feast for the eyes 22",
+  },
+  {
+    src: ds1_5,
+    alt: "Feast for the eyes 23",
+  },
+  {
+    src: ds1_6,
+    alt: "Feast for the eyes 24",
   },
 ];
 
