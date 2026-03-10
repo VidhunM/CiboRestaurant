@@ -85,7 +85,7 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row gap-4"
         >
           <button
-            onClick={() => scrollTo("#menu")}
+            onClick={() => scrollTo("#gallery")}
             className="font-body text-sm letter-spacing-widest uppercase px-10 py-4 bg-foreground text-background hover:bg-primary hover:text-primary-foreground transition-all duration-300"
           >
             Our Menu
