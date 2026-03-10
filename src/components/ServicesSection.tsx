@@ -12,6 +12,9 @@ import {
 } from "@/components/ui/carousel";
 import fineDiningImg from "@/assets/FD.jpeg";
 import getTogetherImg from "@/assets/Gg.jpeg";
+import birthdayPartyImg from "@/assets/bp.jpg";
+import corporateEventsImg from "@/assets/ce.jpg";
+import cateringServicesImg from "@/assets/cs.jpg";
 
 const services = [
     {
@@ -25,14 +28,14 @@ const services = [
         icon: Utensils,
         title: "Catering Services",
         description: "Bring the exquisite taste of Cibo to your special events. We offer comprehensive catering solutions for any occasion.",
-        image: "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070&auto=format&fit=crop",
+        image: cateringServicesImg,
         features: ["Customized Menus", "Live Counters", "Professional Staff", "Event Planning Support"]
     },
     {
         icon: PartyPopper,
         title: "Birthday Parties",
         description: "Make your birthday celebration unforgettable. We provide the perfect venue, delicious food, and festive atmosphere.",
-        image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?q=80&w=2070&auto=format&fit=crop",
+        image: birthdayPartyImg,
         features: ["Themed Decorations", "Custom Cakes", "Private Area", "Entertainment Options"]
     },
     {
@@ -46,7 +49,7 @@ const services = [
         icon: Briefcase,
         title: "Corporate Events",
         description: "Host professional meetings and corporate dinners with style. We offer the ideal setting for business discussions.",
-        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop",
+        image: corporateEventsImg,
         features: ["Audio/Visual Equipment", "Private Rooms", "Business Lunch Menus", "High-Speed Wi-Fi"]
     }
 ];
@@ -61,7 +64,7 @@ const ServicesSection = () => {
 
         const intervalId = setInterval(() => {
             api.scrollNext();
-        }, 5000);
+        }, 8000);
 
         return () => clearInterval(intervalId);
     }, [api]);
@@ -90,7 +93,7 @@ const ServicesSection = () => {
                 </motion.div>
 
                 {/* Services Carousel */}
-                <Carousel setApi={setApi} className="w-full" opts={{ loop: true }}>
+                <Carousel setApi={setApi} className="w-full" opts={{ loop: true, duration: 60 }}>
                     <CarouselContent>
                         {services.map((service, index) => (
                             <CarouselItem key={service.title} className="pl-4">
