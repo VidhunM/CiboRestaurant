@@ -17,8 +17,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@cibosalem.com",
-    href: "mailto:info@cibosalem.com",
+    value: " Salemcibo@gmail.com",
+    href: "mailto:Salemcibo@gmail.com",
   },
   {
     icon: Clock,
